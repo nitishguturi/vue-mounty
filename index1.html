@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>vue</title>
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+</head>
+<body>
+
+<section>
+ <h1>  
+  TOP RATED & UPCOMING MOVIES
+</h1>
+       
+ <div class="centerDiv">
+  <div class="details">
+   <label>enter which u wish 2 see</label><br>
+        <label>toprated (or) upcoming??</label><br>
+   <input type="text" name="" id="nameid">
+  </div>
+
+  <div class="imgdiv">
+   <img src="movie.jpg" width="200" height="200" class="imgchange">
+  </div>
+
+  <button> Click Me</button>
+  
+ </div>
+</section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script>
+ $(document).ready(function(){
+  $('button').click(function(){
+    if{
+      const name = $('#nameid=toprated').val();
+   alert(name);
+    }
+   else{
+    const name = $('#nameid=upcoming').val();
+   alert(name);
+   }
+   $('.imgchange').attr('src','https://developers.themoviedb.org/3/movies/get-top-rated-movies');
+   const a = $('.imgchange');
+   console.log(a);
+
+  $('.imgchange').attr('src','https://developers.themoviedb.org/3/movies/get-upcoming');
+   const b = $('.imgchange');
+   console.log(b);
+  });
+ });
+</script>
+
+</body>
+</html>
